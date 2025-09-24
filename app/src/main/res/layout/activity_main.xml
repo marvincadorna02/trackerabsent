@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper">
 
-    <!-- Card container -->
+    <!-- Title Part -->
 
     <TextView
         android:id="@+id/LoginTitle"
@@ -22,6 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Card container Part -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLogin"
@@ -41,13 +43,15 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- Username -->
+            <!-- Username Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="School ID"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/user"
+                app:startIconTint="#D3D3D3"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -60,10 +64,10 @@
                     android:id="@+id/schooldID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password -->
+            <!-- Password Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -71,6 +75,8 @@
                 android:layout_marginTop="16dp"
                 android:hint="Password"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/lock"
+                app:startIconTint="#D3D3D3"
                 app:boxCornerRadiusBottomEnd="12dp"
                 app:boxCornerRadiusBottomStart="12dp"
                 app:boxCornerRadiusTopEnd="12dp"
@@ -97,7 +103,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_gravity="end"/>
 
-            <!-- Login button -->
+            <!-- Login button Part -->
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
@@ -108,6 +114,7 @@
                 android:text="LOGIN"
                 android:textColor="#FFFFFF" />
 
+        <!-- Register Here Part -->
             <TextView
                 android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"

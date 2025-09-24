@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/wallpaper">
 
-    <!-- Title -->
+    <!-- Title Part -->
     <TextView
         android:id="@+id/LoginTitle"
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Card container -->
+    <!-- Card container Part -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardLogin"
         android:layout_width="0dp"
@@ -41,13 +41,15 @@
             android:orientation="vertical"
             android:padding="20dp">
 
-            <!-- School ID -->
+            <!-- School ID Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="School ID"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/card"
+                app:startIconTint="#D3D3D3"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="clear_text">
@@ -56,10 +58,11 @@
                     android:id="@+id/schooldID"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password -->
+            <!-- Password Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -67,6 +70,8 @@
                 android:layout_marginTop="12dp"
                 android:hint="Password"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/lock"
+                app:startIconTint="#D3D3D3"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="password_toggle">
@@ -78,7 +83,7 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Confirm Password -->
+            <!-- Confirm Password Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -86,6 +91,8 @@
                 android:layout_marginTop="12dp"
                 android:hint="Confirm Password"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/lock"
+                app:startIconTint="#D3D3D3"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="password_toggle">
@@ -97,7 +104,7 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Course -->
+            <!-- Course Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
@@ -105,6 +112,8 @@
                 android:layout_marginTop="12dp"
                 android:hint="Course"
                 android:textColorHint="#D3D3D3"
+                app:startIconDrawable="@drawable/school"
+                app:startIconTint="#D3D3D3"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp">
 
@@ -115,7 +124,7 @@
                     android:inputType="textCapWords" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Register button -->
+            <!-- Register button Part -->
             <Button
                 android:id="@+id/btnRegister"
                 android:layout_width="match_parent"
@@ -126,7 +135,7 @@
                 android:text="REGISTER"
                 android:textColor="#FFFFFF" />
 
-            <!-- Already have account -->
+            <!-- Already have account Part -->
             <TextView
                 android:id="@+id/tvLogin"
                 android:layout_width="wrap_content"
