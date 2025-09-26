@@ -48,14 +48,13 @@ class RegisterActivity : AppCompatActivity() {
 
             when {
                 schoolID.isEmpty() || password.isEmpty() || confirmPassword.isEmpty() || course.isEmpty() -> {
-                    Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Please complete the following", Toast.LENGTH_SHORT).show()
                 }
                 password != confirmPassword -> {
                     Toast.makeText(this, "Password and Confirm Password do not match", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     Toast.makeText(this, "Registration Successful!", Toast.LENGTH_SHORT).show()
-                    // example: balik sa login page
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
@@ -63,7 +62,6 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        // modern back button handling
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
                 finish()

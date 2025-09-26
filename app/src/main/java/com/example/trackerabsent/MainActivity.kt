@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         tvRegister = findViewById(R.id.tvRegister)
 
         // connect sa EditTexts ug Button
-        etSchoolID = findViewById(R.id.schooldID) // dapat naka-XML ug id="etSchoolID"
-        etPassword = findViewById(R.id.password) // dapat naka-XML ug id="etPassword"
-        btnLogin = findViewById(R.id.btnLogin)     // dapat naka-XML ug id="btnLogin"
+        etSchoolID = findViewById(R.id.schooldID)
+        etPassword = findViewById(R.id.password)
+        btnLogin = findViewById(R.id.btnLogin)
 
         // click listener para mo-navigate sa RegisterActivity
         tvRegister.setOnClickListener {
@@ -40,13 +40,9 @@ class MainActivity : AppCompatActivity() {
             val password = etPassword.text.toString().trim()
 
             if (schoolID.isEmpty() || password.isEmpty()) {
-                // show toast message sa baba
                 Toast.makeText(this, "Please enter School ID and Password", Toast.LENGTH_SHORT).show()
             } else {
-                // example: proceed sa next activity or login logic
                 Toast.makeText(this, "Successfully Login!", Toast.LENGTH_SHORT).show()
-                // val intent = Intent(this, NextActivity::class.java)
-                // startActivity(intent)
             }
         }
     }
