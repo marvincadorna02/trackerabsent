@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper">
+    android:background="@drawable/background">
 
     <!-- Title Part -->
     <TextView
@@ -16,7 +16,7 @@
         android:textColor="#8c52ff"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -27,51 +27,57 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="8dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
-        app:cardElevation="8dp"
+        app:cardElevation="6dp"
         app:layout_constraintTop_toBottomOf="@id/LoginTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <LinearLayout
+
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
 
             <!-- School ID Part -->
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="School ID"
+            app:hintTextColor="@color/purple_700"
+            app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:startIconDrawable="@drawable/card"
+            app:startIconTint="@color/purple_700"
+            app:boxStrokeColor="@color/purple_700"
+            app:boxStrokeWidth="2dp"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/schooldID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="School ID"
-                android:textColorHint="#D3D3D3"
-                app:startIconDrawable="@drawable/card"
-                app:startIconTint="#D3D3D3"
-                app:boxStrokeColor="@color/purple_700"
-                app:boxStrokeWidth="2dp"
-                app:endIconMode="clear_text">
+                android:inputType="number"
+                android:textColor="@color/purple_700"
+                android:textColorHint="@color/purple_700"
+                />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/schooldID"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Password Part -->
+        <!-- Password Part -->
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="Password"
-                android:textColorHint="#D3D3D3"
+                app:hintTextColor="@color/purple_700"
+                app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:startIconDrawable="@drawable/lock"
-                app:startIconTint="#D3D3D3"
+                app:startIconTint="@color/purple_700"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="password_toggle">
@@ -80,7 +86,9 @@
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@color/purple_700"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Confirm Password Part -->
@@ -90,9 +98,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="Confirm Password"
-                android:textColorHint="#D3D3D3"
+                app:hintTextColor="@color/purple_700"
+                app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:startIconDrawable="@drawable/lock"
-                app:startIconTint="#D3D3D3"
+                app:startIconTint="@color/purple_700"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp"
                 app:endIconMode="password_toggle">
@@ -101,7 +110,9 @@
                     android:id="@+id/confirmPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@color/purple_700"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Course Part -->
@@ -111,9 +122,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:hint="Course"
-                android:textColorHint="#D3D3D3"
+                app:hintTextColor="@color/purple_700"
+                app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:startIconDrawable="@drawable/school"
-                app:startIconTint="#D3D3D3"
+                app:startIconTint="@color/purple_700"
                 app:boxStrokeColor="@color/purple_700"
                 app:boxStrokeWidth="2dp">
 
@@ -121,21 +133,23 @@
                     android:id="@+id/course"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textCapWords" />
+                    android:inputType="text"
+                    android:textColor="@color/purple_700"
+                    android:textColorHint="@color/purple_700"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Register button Part -->
-            <Button
-                android:id="@+id/btnRegister"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:backgroundTint="#8c52ff"
-                android:padding="12dp"
-                android:text="REGISTER"
-                android:textColor="#FFFFFF" />
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#8c52ff"
+            android:padding="12dp"
+            android:text="REGISTER"
+            android:textColor="#FFFFFF"/>
 
-            <!-- Already have account Part -->
+        <!-- Already have account Part -->
             <TextView
                 android:id="@+id/tvLogin"
                 android:layout_width="wrap_content"
