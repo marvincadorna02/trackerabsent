@@ -11,10 +11,10 @@
         android:id="@+id/LoginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_italic"
-        android:text="Create an Account"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Start Your Journey Here"
         android:textColor="#8c52ff"
-        android:textSize="30sp"
+        android:textSize="27sp"
         android:textStyle="bold"
         android:layout_marginTop="140dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,8 +26,8 @@
         android:id="@+id/cardLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="38dp"
+        android:layout_marginTop="10dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="16dp"
         app:cardElevation="6dp"
@@ -35,18 +35,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-
-    <LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="28dp">
 
             <!-- School ID Part -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutSchooldID"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
             android:hint="School ID"
             app:hintTextColor="@color/purple_700"
             app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
@@ -69,10 +70,12 @@
 
         <!-- Password Part -->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutPasswordd"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="0dp"
                 android:hint="Password"
                 app:hintTextColor="@color/purple_700"
                 app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
@@ -93,10 +96,12 @@
 
             <!-- Confirm Password Part -->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutConfirmPassword"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="0dp"
                 android:hint="Confirm Password"
                 app:hintTextColor="@color/purple_700"
                 app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
@@ -117,10 +122,12 @@
 
             <!-- Course Part -->
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutCourse"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="0dp"
                 android:hint="Course"
                 app:hintTextColor="@color/purple_700"
                 app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
@@ -144,6 +151,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="5dp"
             android:backgroundTint="#8c52ff"
             android:padding="12dp"
             android:text="REGISTER"

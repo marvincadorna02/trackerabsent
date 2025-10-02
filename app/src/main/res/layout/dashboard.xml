@@ -1,7 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".DashboardActivity">
 
-</LinearLayout>
+    <!-- Top App Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#E0E0E0"
+        app:title="Attendance Tracker"
+        app:titleTextColor="@color/black"
+        app:titleTextAppearance="@style/Toolbar.Title.Bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bottom App Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="#E0E0E0"
+        app:title=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Icons + Text container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- Home -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="78dp">
+
+                <ImageView
+                    android:id="@+id/icon_home"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/school"
+                    android:layout_marginTop="-13dp"
+                    android:padding="12dp"
+                    android:contentDescription="Home"
+                    app:tint="#8c52ff"/>
+
+                <TextView
+                    android:id="@+id/text_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textSize="12sp" android:textStyle="bold"
+                    android:textColor="@color/purple_700"
+                    android:layout_marginTop="-13dp"/>
+            </LinearLayout>
+
+            <!-- User -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginEnd="80dp">
+
+                <ImageView
+                    android:id="@+id/icon_user"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/user"
+                    android:layout_marginTop="-13dp"
+                    android:padding="12dp"
+                    android:contentDescription="User"
+                    app:tint="#8c52ff"/>
+
+                <TextView
+                    android:id="@+id/text_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_700"
+                    android:layout_marginTop="-12dp"/>
+            </LinearLayout>
+
+            <!-- Card -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/icon_card"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/card"
+                    android:layout_marginTop="-13dp"
+                    android:padding="12dp"
+                    android:contentDescription="Card"
+                    app:tint="#8c52ff"/>
+
+                <TextView
+                    android:id="@+id/text_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Card"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_700"
+                    android:layout_marginTop="-12dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:contentDescription="Add"
+        app:srcCompat="@drawable/ic_add"
+        app:backgroundTint="#8c52ff"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="100dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

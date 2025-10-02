@@ -29,6 +29,11 @@
             android:exported="true"
             android:label="Register" />
 
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="true"
+            android:label="Dashboard" />
+
     </application>
 
 </manifest>
