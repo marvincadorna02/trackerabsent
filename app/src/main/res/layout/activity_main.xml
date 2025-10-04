@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Your Attendance Matters"
+        android:text="Your Attendance \nMatters"
         android:textColor="#8c52ff"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -53,10 +53,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="0dp"
                     android:hint="School ID"
+                    android:textColorHint="#8c52ff"
                     app:hintTextColor="@color/purple_700"
                     app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
                     app:startIconDrawable="@drawable/user"
-                    app:startIconTint="@color/purple_700"
+                    app:startIconTint="#8c52ff"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
@@ -69,6 +70,8 @@
                         android:id="@+id/schooldID"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColorHint="#8c52ff"
+                        android:textColor="@color/purple_700"
                         android:inputType="number"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,10 +84,11 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginHorizontal="0dp"
                     android:hint="Password"
+                    android:textColorHint="#8c52ff"
                     app:hintTextColor="@color/purple_700"
                     app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
                     app:startIconDrawable="@drawable/lock"
-                    app:startIconTint="@color/purple_700"
+                    app:startIconTint="#8c52ff"
                     app:boxCornerRadiusBottomEnd="12dp"
                     app:boxCornerRadiusBottomStart="12dp"
                     app:boxCornerRadiusTopEnd="12dp"
@@ -97,6 +101,8 @@
                         android:id="@+id/password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColorHint="#8c52ff"
+                        android:textColor="@color/purple_700"
                         android:inputType="textPassword" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,7 +138,7 @@
                 android:paddingTop="20dp"
                 android:text="Don't have an account? Register here"
                 android:textColor="#8c52ff"
-                android:textSize="14sp"
+                android:textSize="13sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
